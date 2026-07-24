@@ -1,0 +1,175 @@
+openapi: 3.0.0
+info:
+  title: Platzi Fake Store auth products API
+  description: ''
+  version: '1.0'
+  contact: {}
+servers: []
+tags:
+- name: products
+paths:
+  /api/v1/products:
+    get:
+      operationId: ProductsController_getAll
+      parameters:
+      - name: limit
+        required: true
+        in: query
+        schema:
+          type: number
+      - name: offset
+        required: true
+        in: query
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+    post:
+      operationId: ProductsController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProductDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+      - products
+  /api/v1/products/{id}:
+    get:
+      operationId: ProductsController_getProduct
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+    put:
+      operationId: ProductsController_update
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProductDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+    delete:
+      operationId: ProductsController_delete
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+  /api/v1/products/{id}/related:
+    get:
+      operationId: ProductsController_getRelatedProducts
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+  /api/v1/products/slug/{slug}:
+    get:
+      operationId: ProductsController_getProductBySlug
+      parameters:
+      - name: slug
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+  /api/v1/products/slug/{slug}/related:
+    get:
+      operationId: ProductsController_getRelatedProductsBySlug
+      parameters:
+      - name: slug
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+      - products
+components:
+  schemas:
+    UpdateProductDto:
+      type: object
+      properties:
+        title:
+          type: string
+        price:
+          type: number
+        description:
+          type: string
+        categoryId:
+          type: number
+        images:
+          type: array
+          items:
+            type: string
+      required:
+      - title
+      - price
+      - description
+      - categoryId
+      - images
+    CreateProductDto:
+      type: object
+      properties:
+        title:
+          type: string
+        price:
+          type: number
+        description:
+          type: string
+        categoryId:
+          type: number
+        images:
+          type: array
+          items:
+            type: string
+      required:
+      - title
+      - price
+      - description
+      - categoryId
+      - images

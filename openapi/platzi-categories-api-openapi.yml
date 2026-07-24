@@ -1,0 +1,144 @@
+openapi: 3.0.0
+info:
+  title: Platzi Fake Store auth categories API
+  description: ''
+  version: '1.0'
+  contact: {}
+servers: []
+tags:
+- name: categories
+paths:
+  /api/v1/categories:
+    get:
+      operationId: CategoriesController_getAll
+      parameters:
+      - name: limit
+        required: true
+        in: query
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+    post:
+      operationId: CategoriesController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCategoryDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+      - categories
+  /api/v1/categories/{id}:
+    get:
+      operationId: CategoriesController_getOne
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+    put:
+      operationId: CategoriesController_update
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCategoryDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+    delete:
+      operationId: CategoriesController_delete
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+  /api/v1/categories/slug/{slug}:
+    get:
+      operationId: CategoriesController_getCategoryBySlug
+      parameters:
+      - name: slug
+        required: true
+        in: path
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+  /api/v1/categories/{id}/products:
+    get:
+      operationId: CategoriesController_getProductsByCategory
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      - name: limit
+        required: true
+        in: query
+        schema:
+          type: number
+      - name: offset
+        required: true
+        in: query
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - categories
+components:
+  schemas:
+    CreateCategoryDto:
+      type: object
+      properties:
+        name:
+          type: string
+        image:
+          type: string
+      required:
+      - name
+      - image
+    UpdateCategoryDto:
+      type: object
+      properties:
+        name:
+          type: string
+        image:
+          type: string
+      required:
+      - name
+      - image

@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Platzi Fake Store auth Locations API
+  description: ''
+  version: '1.0'
+  contact: {}
+servers: []
+tags:
+- name: Locations
+paths:
+  /api/v1/locations:
+    get:
+      operationId: LocationsController_getAll
+      parameters:
+      - name: radius
+        required: true
+        in: query
+        schema:
+          type: number
+      - name: size
+        required: true
+        in: query
+        schema:
+          type: number
+      - name: origin
+        required: true
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ''
+      tags:
+      - Locations

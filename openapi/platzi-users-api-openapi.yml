@@ -1,0 +1,146 @@
+openapi: 3.0.0
+info:
+  title: Platzi Fake Store auth users API
+  description: ''
+  version: '1.0'
+  contact: {}
+servers: []
+tags:
+- name: users
+paths:
+  /api/v1/users:
+    get:
+      operationId: UsersController_getAll
+      parameters:
+      - name: limit
+        required: true
+        in: query
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - users
+    post:
+      operationId: UsersController_create
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+      - users
+  /api/v1/users/{id}:
+    get:
+      operationId: UsersController_get
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - users
+    put:
+      operationId: UsersController_update
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserDto'
+      responses:
+        '200':
+          description: ''
+      tags:
+      - users
+    delete:
+      operationId: UsersController_delete
+      parameters:
+      - name: id
+        required: true
+        in: path
+        schema:
+          type: number
+      responses:
+        '200':
+          description: ''
+      tags:
+      - users
+  /api/v1/users/is-available:
+    post:
+      operationId: UsersController_isAvailable
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidateUserDto'
+      responses:
+        '201':
+          description: ''
+      tags:
+      - users
+components:
+  schemas:
+    CreateUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+        name:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+        avatar:
+          type: string
+      required:
+      - email
+      - name
+      - password
+      - role
+      - avatar
+    UpdateUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+        name:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+        avatar:
+          type: string
+      required:
+      - email
+      - name
+      - password
+      - role
+      - avatar
+    ValidateUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+      required:
+      - email
