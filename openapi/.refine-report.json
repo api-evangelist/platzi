@@ -1,0 +1,24 @@
+{
+  "provider": "platzi",
+  "sources": [
+    "platzi-auth-api-openapi.yml",
+    "platzi-categories-api-openapi.yml",
+    "platzi-files-api-openapi.yml",
+    "platzi-locations-api-openapi.yml",
+    "platzi-products-api-openapi.yml",
+    "platzi-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "platzi-auth-api-openapi.yml",
+    "platzi-categories-api-openapi.yml",
+    "platzi-files-api-openapi.yml",
+    "platzi-locations-api-openapi.yml",
+    "platzi-products-api-openapi.yml",
+    "platzi-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

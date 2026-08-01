@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/platzi-fake-store-openapi-original.json
+entities:
+- name: Product
+  key: id
+  fields: [id, title, slug, price, description, category, images, creationAt, updatedAt]
+  relationships:
+  - type: belongs_to
+    target: Category
+    via: categoryId
+    note: Write DTO uses categoryId; read responses embed the full Category object.
+  - type: has_many
+    target: Product
+    via: related
+    note: GET /products/{id}/related returns related products.
+- name: Category
+  key: id
+  fields: [id, name, slug, image, creationAt, updatedAt]
+  relationships:
+  - type: has_many
+    target: Product
+    via: category
+    note: GET /categories/{id}/products lists a category's products.
+- name: User
+  key: id
+  fields: [id, email, name, password, role, avatar, creationAt, updatedAt]
+  relationships:
+  - type: has_one
+    target: Role
+    via: role
+    note: role is an enum (customer, admin).
+- name: File
+  key: filename
+  fields: [originalname, filename, location]
+  note: Created via POST /files/upload; served via GET /files/{filename}.
+- name: Location
+  key: id
+  note: GET /locations returns geographic location fixtures.
+- name: Auth
+  fields: [access_token, refresh_token]
+  note: Issued by /auth/login and /auth/refresh-token; not a stored entity.
+id_conventions:
+  ids: integer auto-increment (products, categories, users)
+  slugs: kebab-case string, unique per product/category

@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+hosts:
+- host: https://api.escuelajs.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://platzi.com
+  documents:
+  - path: /llms.txt
+    status: 200
+    file: ../llms/platzi-llms.txt
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+notes: >-
+  The API host (api.escuelajs.co) exposes no /.well-known/ discovery documents.
+  The company host platzi.com publishes a real /llms.txt (saved verbatim to
+  llms/platzi-llms.txt); its /.well-known/* paths 301-redirect to trailing-slash
+  URLs and do not serve discovery documents.

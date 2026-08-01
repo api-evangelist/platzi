@@ -1,0 +1,32 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Platzi Fake Store API
+  version: 1.0.0
+extends: openapi/platzi-fake-store-openapi-original.json
+actions:
+- target: $.info
+  update:
+    description: >-
+      The Platzi Fake Store API is a free, public REST backend serving mock
+      e-commerce data (products, categories, users, files, locations) with full
+      CRUD, JWT authentication, and limit/offset pagination. No signup required.
+    x-apievangelist-rating: 3
+    x-logo:
+      url: https://static.platzi.com/media/og/platzi.png
+- target: $.servers
+  update:
+  - url: https://api.escuelajs.co/api/v1
+    description: Production (public, no-signup mock backend)
+- target: $.components.securitySchemes
+  update:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: >-
+        JWT access token obtained from POST /auth/login, sent as
+        Authorization: Bearer <access_token>. Refresh via /auth/refresh-token.
+- target: $.externalDocs
+  update:
+    description: Platzi Fake Store API documentation
+    url: https://fakeapi.platzi.com/

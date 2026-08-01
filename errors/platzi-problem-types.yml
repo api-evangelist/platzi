@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/platzi-fake-store-openapi-original.json
+format: nestjs-http-exception
+envelope:
+  note: >-
+    The OpenAPI document declares only 2xx responses, so error shapes were
+    DERIVED from the live NestJS default exception envelope observed on the
+    running API (e.g. GET a missing path). Not RFC 9457 problem+json.
+  fields:
+  - message   # string or array of validation strings
+  - error     # HTTP reason phrase (e.g. "Not Found")
+  - statusCode  # integer HTTP status
+  example: '{"message":"Cannot GET /x","error":"Not Found","statusCode":404}'
+problems:
+- status: 400
+  error: Bad Request
+  title: Validation failed
+  remediation: Check request body against the DTO required fields (e.g. CreateProductDto requires title, price, description, categoryId, images).
+- status: 401
+  error: Unauthorized
+  title: Missing or invalid JWT
+  remediation: Obtain an access_token via POST /auth/login and send Authorization Bearer; refresh when expired.
+- status: 404
+  error: Not Found
+  title: Resource or route not found
+  remediation: Verify the id/slug exists and the path is correct.

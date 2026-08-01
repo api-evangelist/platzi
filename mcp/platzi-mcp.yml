@@ -1,0 +1,90 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/platzi-fake-store-openapi-original.json
+server:
+  name: platzi-fake-store
+  transport: http
+  note: No official hosted MCP server was found. Tools below are DERIVED candidates, one per OpenAPI operation.
+tools:
+  - name: products_getall
+    description: "GET /api/v1/products"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_getAll
+  - name: products_create
+    description: "POST /api/v1/products"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_create
+  - name: products_getproduct
+    description: "GET /api/v1/products/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_getProduct
+  - name: products_update
+    description: "PUT /api/v1/products/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_update
+  - name: products_delete
+    description: "DELETE /api/v1/products/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_delete
+  - name: products_getrelatedproducts
+    description: "GET /api/v1/products/{id}/related"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_getRelatedProducts
+  - name: products_getproductbyslug
+    description: "GET /api/v1/products/slug/{slug}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_getProductBySlug
+  - name: products_getrelatedproductsbyslug
+    description: "GET /api/v1/products/slug/{slug}/related"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#ProductsController_getRelatedProductsBySlug
+  - name: users_getall
+    description: "GET /api/v1/users"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_getAll
+  - name: users_create
+    description: "POST /api/v1/users"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_create
+  - name: users_get
+    description: "GET /api/v1/users/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_get
+  - name: users_update
+    description: "PUT /api/v1/users/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_update
+  - name: users_delete
+    description: "DELETE /api/v1/users/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_delete
+  - name: users_isavailable
+    description: "POST /api/v1/users/is-available"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#UsersController_isAvailable
+  - name: auth_login
+    description: "POST /api/v1/auth/login"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#AuthController_login
+  - name: auth_profile
+    description: "GET /api/v1/auth/profile"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#AuthController_profile
+  - name: auth_refreshtoken
+    description: "POST /api/v1/auth/refresh-token"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#AuthController_refreshToken
+  - name: categories_getall
+    description: "GET /api/v1/categories"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_getAll
+  - name: categories_create
+    description: "POST /api/v1/categories"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_create
+  - name: categories_getone
+    description: "GET /api/v1/categories/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_getOne
+  - name: categories_update
+    description: "PUT /api/v1/categories/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_update
+  - name: categories_delete
+    description: "DELETE /api/v1/categories/{id}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_delete
+  - name: categories_getcategorybyslug
+    description: "GET /api/v1/categories/slug/{slug}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_getCategoryBySlug
+  - name: categories_getproductsbycategory
+    description: "GET /api/v1/categories/{id}/products"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#CategoriesController_getProductsByCategory
+  - name: files_uploadfile
+    description: "POST /api/v1/files/upload"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#FilesController_uploadFile
+  - name: files_seeuploadedfile
+    description: "GET /api/v1/files/{filename}"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#FilesController_seeUploadedFile
+  - name: locations_getall
+    description: "GET /api/v1/locations"
+    source_operation: openapi/platzi-fake-store-openapi-original.json#LocationsController_getAll

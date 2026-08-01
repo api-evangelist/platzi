@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://fakeapi.platzi.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://api.escuelajs.co/api/v1
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation or Sunset (RFC 8594) policy is published for this free mock API.
+sla:
+  url: null
+  note: No SLA is published; this is a free, best-effort public mock backend.
+status_page: https://status.platzi.com
+source_project: https://github.com/PlatziLabs/fake-api-backend
+deprecated_operations: []
+notes: >-
+  status.platzi.com resolves (HTTP 200) as the Platzi company status page. The
+  Fake Store API itself publishes no dedicated status page, SLA, or deprecation
+  policy — it is a free prototyping backend whose data resets periodically.

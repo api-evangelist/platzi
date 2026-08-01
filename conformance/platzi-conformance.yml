@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/platzi-fake-store-openapi-original.json
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: Published OpenAPI 3.0.0 document served from the /docs Swagger UI.
+- id: rest
+  conforms: true
+  evidence: Resource-oriented HTTP endpoints (products, categories, users) with standard verbs.
+- id: graphql
+  conforms: true
+  evidence: GraphQL endpoint at https://api.escuelajs.co/graphql with Query and Mutation types.
+- id: jwt-bearer-auth
+  conforms: true
+  evidence: /auth/login issues JWT access + refresh tokens; Authorization Bearer on protected routes.
+- id: offset-pagination
+  conforms: true
+  evidence: List endpoints accept limit and offset query parameters.
+- id: oauth2
+  conforms: false
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors returned as NestJS default JSON envelope, not application/problem+json.
+- id: idempotency
+  conforms: false

@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://fakeapi.platzi.com/en/rest/auth-jwt/
+docs: https://fakeapi.platzi.com/en/rest/auth-jwt/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  notes: >-
+    The OpenAPI document does not declare a securityScheme, but the API
+    documents JWT bearer authentication. POST /auth/login returns an
+    access_token and refresh_token; the access_token is sent as
+    `Authorization: Bearer <access_token>` on protected endpoints
+    (e.g. GET /auth/profile). Access tokens expire; POST /auth/refresh-token
+    exchanges a refresh_token for a new access_token. Read endpoints
+    (products, categories) are open and require no authentication.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  in: header
+  parameter: Authorization
+  sources: [docs]
+flows:
+- name: login
+  operation: openapi/platzi-fake-store-openapi-original.json#AuthController_login
+  request: 'POST /api/v1/auth/login {email, password}'
+  returns: [access_token, refresh_token]
+- name: refresh
+  operation: openapi/platzi-fake-store-openapi-original.json#AuthController_refreshToken
+  request: 'POST /api/v1/auth/refresh-token {refreshToken}'
+  returns: [access_token, refresh_token]
+- name: profile
+  operation: openapi/platzi-fake-store-openapi-original.json#AuthController_profile
+  request: 'GET /api/v1/auth/profile (Authorization: Bearer <access_token>)'

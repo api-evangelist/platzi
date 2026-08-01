@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/platzi-fake-store-openapi-original.json
+skills:
+- file: platzi-browse-products.md
+  name: Browse and filter products
+  api: openapi/platzi-fake-store-openapi-original.json
+  operations: [ProductsController_getAll, ProductsController_getProduct, ProductsController_getProductBySlug, ProductsController_getRelatedProducts, CategoriesController_getAll, CategoriesController_getProductsByCategory]
+- file: platzi-authenticate.md
+  name: Authenticate with JWT
+  api: openapi/platzi-fake-store-openapi-original.json
+  operations: [AuthController_login, AuthController_profile, AuthController_refreshToken]
+- file: platzi-manage-catalog.md
+  name: Manage catalog (CRUD)
+  api: openapi/platzi-fake-store-openapi-original.json
+  operations: [CategoriesController_create, ProductsController_create, ProductsController_update, ProductsController_delete, CategoriesController_delete]

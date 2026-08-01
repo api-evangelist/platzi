@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://fakeapi.platzi.com/en/about/introduction/
+authentication:
+  style: jwt-bearer
+  header: 'Authorization: Bearer <access_token>'
+  ref: authentication/platzi-authentication.yml
+pagination:
+  style: offset
+  params:
+    limit: Number of items to return
+    offset: Number of items to skip
+  example: /products?limit=10&offset=20
+  note: Open list endpoints; no cursor. Absence of params returns a default page.
+filtering:
+  supported: true
+  fields:
+    products: [title, price, price_min, price_max, categoryId, categorySlug]
+  example: /products?price_min=900&price_max=1000&title=Shirt
+  slug_lookup: /products/slug/{slug} and /categories/slug/{slug}
+idempotency:
+  supported: false
+  note: No idempotency-key header/parameter is documented or present in the spec.
+versioning:
+  style: uri-path
+  current: v1
+  ref: lifecycle/platzi-lifecycle.yml
+error_envelope:
+  shape: '{message, error, statusCode}'
+  format: nestjs-http-exception
+  ref: errors/platzi-problem-types.yml
+rate_limit_signal:
+  documented: false
+  note: No rate-limit headers or policy documented for this free mock API.
+content_types:
+  request: [application/json, multipart/form-data]
+  file_upload: 'POST /files/upload (multipart/form-data field: file)'
+graphql:
+  endpoint: https://api.escuelajs.co/graphql
+  note: A GraphQL surface mirrors the REST resources (Product, Category, User).

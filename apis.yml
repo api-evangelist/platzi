@@ -1,7 +1,28 @@
 aid: platzi
 name: Platzi
-description: Platzi is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Platzi is the leading online learning platform in Latin America, offering
+  thousands of technology, business, and marketing courses. For developers,
+  Platzi (via PlatziLabs) publishes the free, public "Platzi Fake Store API" —
+  a fully functional REST and GraphQL backend that provides mock e-commerce data
+  (products, categories, users) with complete CRUD operations, JWT
+  authentication, pagination, filtering, file upload, and AI-generated product
+  imagery. It is a zero-signup prototyping API used worldwide to learn and
+  practice building shopping and front-end applications, backed by an open
+  source NestJS project.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://static.platzi.com/media/og/platzi.png
 url: https://raw.githubusercontent.com/api-evangelist/platzi/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +32,253 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Education
+- E-Commerce
+- Products
+- Mock API
+- Prototyping
+- REST
+- GraphQL
+- Fake Store
+- Developer Tools
+apis:
+- aid: platzi:platzi-auth-api
+  name: Platzi auth API
+  description: The auth API from Platzi — 3 operation(s) for auth.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - auth
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-auth-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+- aid: platzi:platzi-categories-api
+  name: Platzi categories API
+  description: The categories API from Platzi — 4 operation(s) for categories.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - categories
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-categories-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+- aid: platzi:platzi-files-api
+  name: Platzi files API
+  description: The files API from Platzi — 2 operation(s) for files.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - files
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-files-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+- aid: platzi:platzi-locations-api
+  name: Platzi Locations API
+  description: The Locations API from Platzi — 1 operation(s) for locations.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-locations-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+- aid: platzi:platzi-products-api
+  name: Platzi products API
+  description: The products API from Platzi — 5 operation(s) for products.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - products
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-products-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+- aid: platzi:platzi-users-api
+  name: Platzi users API
+  description: The users API from Platzi — 3 operation(s) for users.
+  humanURL: https://fakeapi.platzi.com/
+  baseURL: https://api.escuelajs.co/api/v1
+  tags:
+  - users
+  properties:
+  - type: OpenAPI
+    url: openapi/platzi-users-api-openapi.yml
+  - type: APIReference
+    url: https://api.escuelajs.co/docs
+  - type: Documentation
+    url: https://fakeapi.platzi.com/en/about/introduction/
+  - type: GettingStarted
+    url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+  - type: GraphQL
+    url: https://api.escuelajs.co/graphql
+  - type: Authentication
+    url: authentication/platzi-authentication.yml
+  - type: Sandbox
+    url: sandbox/platzi-sandbox.yml
+  - type: Conventions
+    url: conventions/platzi-conventions.yml
+  - type: ErrorCatalog
+    url: errors/platzi-problem-types.yml
+  - type: DataModel
+    url: data-model/platzi-data-model.yml
+  - type: Conformance
+    url: conformance/platzi-conformance.yml
+common:
+- type: DeveloperPortal
+  url: https://fakeapi.platzi.com/
+- type: Documentation
+  url: https://fakeapi.platzi.com/en/about/introduction/
+- type: APIReference
+  url: https://api.escuelajs.co/docs
+- type: GettingStarted
+  url: https://fakeapi.platzi.com/en/rest/auth-jwt/
+- type: GitHubOrganization
+  url: https://github.com/PlatziLabs
+- type: Blog
+  url: https://platzi.com/blog/
+- type: Pricing
+  url: https://platzi.com/precios/
+- type: TermsOfService
+  url: https://platzi.com/terminos/
+- type: PrivacyPolicy
+  url: https://platzi.com/privacidad/
+- type: StatusPage
+  url: https://status.platzi.com
+- type: LLMsTxt
+  url: llms/platzi-llms.txt
+- type: Authentication
+  url: authentication/platzi-authentication.yml
+- type: Sandbox
+  url: sandbox/platzi-sandbox.yml
+- type: Conventions
+  url: conventions/platzi-conventions.yml
+- type: ErrorCatalog
+  url: errors/platzi-problem-types.yml
+- type: DataModel
+  url: data-model/platzi-data-model.yml
+- type: Lifecycle
+  url: lifecycle/platzi-lifecycle.yml
+- type: Conformance
+  url: conformance/platzi-conformance.yml
+- type: DomainSecurity
+  url: security/platzi-domain-security.yml
+- type: WellKnown
+  url: well-known/platzi-well-known.yml
+- type: MCPServer
+  url: mcp/platzi-mcp.yml
+- type: Overlay
+  url: overlays/platzi-fake-store-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1

@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://fakeapi.platzi.com/en/rest/auth-jwt/
+summary: >-
+  The entire Platzi Fake Store API is a public sandbox. There is no live/test
+  key split — every caller shares one open mock backend at
+  https://api.escuelajs.co/api/v1 with full CRUD and no signup. Data is seeded
+  and reset periodically, so writes are non-durable and safe for experimentation.
+base_url: https://api.escuelajs.co/api/v1
+auth_required: false  # read endpoints are fully open
+test_credentials:
+  note: >-
+    Published seed users for testing JWT auth. Verified live on 2026-07-20 that
+    the first pair returns access_token + refresh_token from POST /auth/login.
+  users:
+  - email: john@mail.com
+    password: changeme
+    role: customer
+  - email: maria@mail.com
+    password: '12345'
+    role: customer
+  - email: admin@mail.com
+    password: admin123
+    role: admin
+data_reset:
+  behavior: seeded-and-reset
+  note: The dataset is periodically restored; do not rely on created/updated records persisting.
+utilities:
+  slug_availability: 'POST /users/is-available checks email availability'
+  file_upload: 'POST /files/upload accepts multipart/form-data and returns a hosted URL'
+  ai_images: Product images can be AI-generated / placeholder image hosts.
+graphql_sandbox: https://api.escuelajs.co/graphql
