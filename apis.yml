@@ -261,6 +261,8 @@ apis:
   - type: Conformance
     url: conformance/platzi-conformance.yml
 common:
+- type: Website
+  url: https://www.platzi.com/
 - type: DeveloperPortal
   url: https://fakeapi.platzi.com/
 - type: Documentation
