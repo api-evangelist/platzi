@@ -172,6 +172,8 @@ apis:
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
