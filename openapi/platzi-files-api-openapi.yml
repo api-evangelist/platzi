@@ -1,12 +1,12 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Platzi Fake Store auth files API
+  title: Platzi Fake Store Files API
   description: ''
   version: '1.0'
   contact: {}
 servers: []
 tags:
-- name: files
+- name: Files
 paths:
   /api/v1/files/upload:
     post:
@@ -16,7 +16,9 @@ paths:
         '201':
           description: ''
       tags:
-      - files
+      - Files
+      summary: Files controller upload file
+      x-summary-source: derived
   /api/v1/files/{filename}:
     get:
       operationId: FilesController_seeUploadedFile
@@ -30,4 +32,6 @@ paths:
         '200':
           description: ''
       tags:
-      - files
+      - Files
+      summary: Files controller see uploaded file
+      x-summary-source: derived

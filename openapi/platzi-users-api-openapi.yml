@@ -1,12 +1,12 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Platzi Fake Store auth users API
+  title: Platzi Fake Store Users API
   description: ''
   version: '1.0'
   contact: {}
 servers: []
 tags:
-- name: users
+- name: Users
 paths:
   /api/v1/users:
     get:
@@ -21,7 +21,9 @@ paths:
         '200':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller get all
+      x-summary-source: derived
     post:
       operationId: UsersController_create
       parameters: []
@@ -35,7 +37,9 @@ paths:
         '201':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller create
+      x-summary-source: derived
   /api/v1/users/{id}:
     get:
       operationId: UsersController_get
@@ -49,7 +53,9 @@ paths:
         '200':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller get
+      x-summary-source: derived
     put:
       operationId: UsersController_update
       parameters:
@@ -68,7 +74,9 @@ paths:
         '200':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller update
+      x-summary-source: derived
     delete:
       operationId: UsersController_delete
       parameters:
@@ -81,7 +89,9 @@ paths:
         '200':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller delete
+      x-summary-source: derived
   /api/v1/users/is-available:
     post:
       operationId: UsersController_isAvailable
@@ -96,7 +106,9 @@ paths:
         '201':
           description: ''
       tags:
-      - users
+      - Users
+      summary: Users controller is available
+      x-summary-source: derived
 components:
   schemas:
     CreateUserDto:

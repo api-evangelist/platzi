@@ -1,12 +1,12 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Platzi Fake Store auth products API
+  title: Platzi Fake Store Products API
   description: ''
   version: '1.0'
   contact: {}
 servers: []
 tags:
-- name: products
+- name: Products
 paths:
   /api/v1/products:
     get:
@@ -26,7 +26,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller get all
+      x-summary-source: derived
     post:
       operationId: ProductsController_create
       parameters: []
@@ -40,7 +42,9 @@ paths:
         '201':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller create
+      x-summary-source: derived
   /api/v1/products/{id}:
     get:
       operationId: ProductsController_getProduct
@@ -54,7 +58,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller get product
+      x-summary-source: derived
     put:
       operationId: ProductsController_update
       parameters:
@@ -73,7 +79,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller update
+      x-summary-source: derived
     delete:
       operationId: ProductsController_delete
       parameters:
@@ -86,7 +94,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller delete
+      x-summary-source: derived
   /api/v1/products/{id}/related:
     get:
       operationId: ProductsController_getRelatedProducts
@@ -100,7 +110,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller get related products
+      x-summary-source: derived
   /api/v1/products/slug/{slug}:
     get:
       operationId: ProductsController_getProductBySlug
@@ -114,7 +126,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller get product by slug
+      x-summary-source: derived
   /api/v1/products/slug/{slug}/related:
     get:
       operationId: ProductsController_getRelatedProductsBySlug
@@ -128,7 +142,9 @@ paths:
         '200':
           description: ''
       tags:
-      - products
+      - Products
+      summary: Products controller get related products by slug
+      x-summary-source: derived
 components:
   schemas:
     UpdateProductDto:

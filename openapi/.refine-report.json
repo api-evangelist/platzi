@@ -1,24 +1,36 @@
 {
   "provider": "platzi",
   "sources": [
-    "platzi-auth-api-openapi.yml",
-    "platzi-categories-api-openapi.yml",
-    "platzi-files-api-openapi.yml",
-    "platzi-locations-api-openapi.yml",
-    "platzi-products-api-openapi.yml",
-    "platzi-users-api-openapi.yml"
+    "_original/platzi-fake-store-openapi-original.json"
   ],
   "outputs": [
+    "platzi-locations-api-openapi.yml",
     "platzi-auth-api-openapi.yml",
     "platzi-categories-api-openapi.yml",
     "platzi-files-api-openapi.yml",
-    "platzi-locations-api-openapi.yml",
     "platzi-products-api-openapi.yml",
     "platzi-users-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "platzi-fake-store-openapi-original.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "platzi-fake-store-openapi-original.json: declared missing tag: Locations",
+    "platzi-fake-store-openapi-original.json: declared missing tag: auth",
+    "platzi-fake-store-openapi-original.json: declared missing tag: categories",
+    "platzi-fake-store-openapi-original.json: declared missing tag: files",
+    "platzi-fake-store-openapi-original.json: declared missing tag: products",
+    "platzi-fake-store-openapi-original.json: declared missing tag: users",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "platzi-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "platzi-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "platzi-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "platzi-locations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "platzi-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "platzi-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

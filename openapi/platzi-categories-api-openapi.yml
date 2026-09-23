@@ -1,12 +1,12 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Platzi Fake Store auth categories API
+  title: Platzi Fake Store Categories API
   description: ''
   version: '1.0'
   contact: {}
 servers: []
 tags:
-- name: categories
+- name: Categories
 paths:
   /api/v1/categories:
     get:
@@ -21,7 +21,9 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller get all
+      x-summary-source: derived
     post:
       operationId: CategoriesController_create
       parameters: []
@@ -35,7 +37,9 @@ paths:
         '201':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller create
+      x-summary-source: derived
   /api/v1/categories/{id}:
     get:
       operationId: CategoriesController_getOne
@@ -49,7 +53,9 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller get one
+      x-summary-source: derived
     put:
       operationId: CategoriesController_update
       parameters:
@@ -68,7 +74,9 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller update
+      x-summary-source: derived
     delete:
       operationId: CategoriesController_delete
       parameters:
@@ -81,7 +89,9 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller delete
+      x-summary-source: derived
   /api/v1/categories/slug/{slug}:
     get:
       operationId: CategoriesController_getCategoryBySlug
@@ -95,7 +105,9 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller get category by slug
+      x-summary-source: derived
   /api/v1/categories/{id}/products:
     get:
       operationId: CategoriesController_getProductsByCategory
@@ -119,10 +131,12 @@ paths:
         '200':
           description: ''
       tags:
-      - categories
+      - Categories
+      summary: Categories controller get products by category
+      x-summary-source: derived
 components:
   schemas:
-    CreateCategoryDto:
+    UpdateCategoryDto:
       type: object
       properties:
         name:
@@ -132,7 +146,7 @@ components:
       required:
       - name
       - image
-    UpdateCategoryDto:
+    CreateCategoryDto:
       type: object
       properties:
         name:
