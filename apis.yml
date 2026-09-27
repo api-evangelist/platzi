@@ -71,7 +71,7 @@ tags_raw:
 - Developer Tools
 apis:
 - aid: platzi:platzi-auth-api
-  name: Platzi auth API
+  name: Platzi Auth API
   description: The auth API from Platzi — 3 operation(s) for auth.
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1
@@ -103,7 +103,7 @@ apis:
   - type: Conformance
     url: conformance/platzi-conformance.yml
 - aid: platzi:platzi-categories-api
-  name: Platzi categories API
+  name: Platzi Categories API
   description: The categories API from Platzi — 4 operation(s) for categories.
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1
@@ -135,7 +135,7 @@ apis:
   - type: Conformance
     url: conformance/platzi-conformance.yml
 - aid: platzi:platzi-files-api
-  name: Platzi files API
+  name: Platzi Files API
   description: The files API from Platzi — 2 operation(s) for files.
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1
@@ -199,7 +199,7 @@ apis:
   - type: Conformance
     url: conformance/platzi-conformance.yml
 - aid: platzi:platzi-products-api
-  name: Platzi products API
+  name: Platzi Products API
   description: The products API from Platzi — 5 operation(s) for products.
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1
@@ -231,7 +231,7 @@ apis:
   - type: Conformance
     url: conformance/platzi-conformance.yml
 - aid: platzi:platzi-users-api
-  name: Platzi users API
+  name: Platzi Users API
   description: The users API from Platzi — 3 operation(s) for users.
   humanURL: https://fakeapi.platzi.com/
   baseURL: https://api.escuelajs.co/api/v1

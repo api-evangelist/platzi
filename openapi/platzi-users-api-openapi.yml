@@ -111,25 +111,13 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreateUserDto:
+    ValidateUserDto:
       type: object
       properties:
         email:
           type: string
-        name:
-          type: string
-        password:
-          type: string
-        role:
-          type: string
-        avatar:
-          type: string
       required:
       - email
-      - name
-      - password
-      - role
-      - avatar
     UpdateUserDto:
       type: object
       properties:
@@ -149,10 +137,22 @@ components:
       - password
       - role
       - avatar
-    ValidateUserDto:
+    CreateUserDto:
       type: object
       properties:
         email:
           type: string
+        name:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+        avatar:
+          type: string
       required:
       - email
+      - name
+      - password
+      - role
+      - avatar
