@@ -118,7 +118,7 @@ components:
           type: string
       required:
       - email
-    UpdateUserDto:
+    CreateUserDto:
       type: object
       properties:
         email:
@@ -137,7 +137,7 @@ components:
       - password
       - role
       - avatar
-    CreateUserDto:
+    UpdateUserDto:
       type: object
       properties:
         email:
