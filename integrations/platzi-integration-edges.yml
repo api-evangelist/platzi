@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/platzi/integrations
+- https://n8n.io/integrations/platzi/
+- https://composio.dev/toolkits/platzi
+- https://monid.ai/tools/platzi
+checked:
+- https://composio.dev/toolkits/platzi
+- https://monid.ai/tools/platzi
+- https://n8n.io/integrations/platzi/
+- https://zapier.com/apps/platzi/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
