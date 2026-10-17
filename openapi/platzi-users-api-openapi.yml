@@ -130,13 +130,6 @@ components:
       - password
       - role
       - avatar
-    ValidateUserDto:
-      type: object
-      properties:
-        email:
-          type: string
-      required:
-      - email
     UpdateUserDto:
       type: object
       properties:
@@ -156,3 +149,10 @@ components:
       - password
       - role
       - avatar
+    ValidateUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+      required:
+      - email

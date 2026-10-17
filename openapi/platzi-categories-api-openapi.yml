@@ -136,7 +136,7 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreateCategoryDto:
+    UpdateCategoryDto:
       type: object
       properties:
         name:
@@ -146,7 +146,7 @@ components:
       required:
       - name
       - image
-    UpdateCategoryDto:
+    CreateCategoryDto:
       type: object
       properties:
         name:
